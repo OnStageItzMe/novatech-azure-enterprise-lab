@@ -1,2 +1,135 @@
+# Networking
 
-This folder contains screenshots and documentation for the networking portion of my Novatech Azure Enterprise Lab.
+This folder contains screenshots and documentation for the **Azure Networking** portion of my **Novatech Azure Enterprise Lab**.
+
+## Networking Components
+
+The environment includes:
+
+* Azure Virtual Networks (VNets)
+* Subnets
+* Network Security Groups (NSGs)
+* VNet Peering
+* Private IP addressing
+* Public IP addressing where required
+* Private Endpoints
+* Azure Network Watcher
+* Route tables and network diagnostics
+
+## Purpose
+
+The networking environment was designed to simulate how a real company could securely connect Azure resources while separating workloads into different network segments.
+
+Virtual networks and subnets were used to organize resources and control how systems communicate with each other.
+
+## Virtual Networks
+
+Azure Virtual Networks were created to provide isolated private networks for cloud resources.
+
+Resources such as virtual machines can communicate using private IP addresses without requiring public internet access.
+
+## Subnets
+
+VNets were divided into subnets to separate different types of workloads.
+
+Examples can include:
+
+* Virtual machines
+* Azure Virtual Desktop session hosts
+* Private Endpoints
+* Management resources
+
+Subnetting helps improve organization, security, and traffic control.
+
+## VNet Peering
+
+VNet Peering was configured to allow resources in separate virtual networks to communicate privately over the Microsoft Azure backbone.
+
+This allows communication without sending traffic through the public internet.
+
+Example:
+
+`VNet A → VNet Peering → VNet B`
+
+## Network Security Groups
+
+Network Security Groups were used to control inbound and outbound network traffic.
+
+NSG rules can allow or deny traffic based on:
+
+* Source IP
+* Destination IP
+* Port
+* Protocol
+* Direction
+* Priority
+
+For example, internal VNet traffic can be allowed while unwanted inbound internet traffic is denied.
+
+## Private Endpoints
+
+Private Endpoints were used to provide Azure platform services with private IP addresses inside the virtual network.
+
+This allows resources such as Azure Storage to be accessed privately.
+
+Example:
+
+`VM → Private Endpoint → Azure Storage`
+
+This reduces exposure to the public internet and improves network security.
+
+## Network Watcher
+
+Azure Network Watcher was used to troubleshoot and validate network connectivity.
+
+Tools used include:
+
+* IP Flow Verify
+* Connection Troubleshoot
+* Next Hop
+* Effective Security Rules
+* Packet Capture
+* NSG Diagnostics
+
+IP Flow Verify can be used to determine whether traffic would be allowed or denied by an NSG and identify the rule responsible.
+
+## Routing
+
+Azure routing determines where network traffic is sent.
+
+Route tables and next-hop information can be used to control and troubleshoot traffic between:
+
+* Subnets
+* VNets
+* On-premises networks
+* Internet destinations
+
+## Security
+
+The networking design focuses on:
+
+* Network segmentation
+* Private IP connectivity
+* Restricted inbound access
+* NSG-based traffic filtering
+* Private Endpoints
+* Reduced public exposure
+* Secure VNet-to-VNet communication
+
+## Skills Demonstrated
+
+This portion of the project demonstrates hands-on experience with:
+
+* Azure Virtual Networks
+* Subnetting
+* Private and public IP addressing
+* Network Security Groups
+* NSG rule priorities
+* VNet Peering
+* Private Endpoints
+* Azure Network Watcher
+* IP Flow Verify
+* Network troubleshooting
+* Azure routing
+* Cloud network security
+
